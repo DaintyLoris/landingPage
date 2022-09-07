@@ -21,6 +21,14 @@ Route::get('/landingpage', function () {
     return view('landingpage');
 });
 
-Route::get('/contacto', function () {
-    return view('contacto');
+Route::get('/contacto/{codigo?}', function ($codigo = null) {
+    
+    if(!empty($codigo)){
+        $codigo = $codigo;
+    }
+    else{
+        $codigo = null;
+    }
+
+    return view('contacto', compact('codigo'));
 });

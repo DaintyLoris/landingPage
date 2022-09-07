@@ -89,10 +89,7 @@
                     </div>
                 </div>
                 <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto" required>
-                </div>
-                <div class="form-group mt-3">
-                    <textarea class="form-control" name="comentario" rows="7" placeholder="comentario" required></textarea>
+                    <textarea class="form-control" id="comentario" name="comentario" rows="7" placeholder="comentario" required></textarea>
                 </div>
                 <div class="my-3">
                     <div class="loading">Loading</div>
@@ -119,6 +116,18 @@
 
         <!-- Template Main JS File -->
         <script src="/js/main.js"></script>
+
+        
+        
+        @if(!empty($codigo))
+            @if($codigo == 1234)
+                <script>
+                    document.getElementById("name").value = "Josue";
+                    document.getElementById("email").value = "josueanguianoortiz28@gmail.com";
+                    document.getElementById("comentario").value = "Hola Este es un comentario agregado!";
+                </script>
+            @endif
+        @endif
 
     </body>
 
