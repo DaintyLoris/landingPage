@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SitioController extends Controller
 {
@@ -36,8 +37,19 @@ class SitioController extends Controller
             'email' => ['required', 'email'],
             'comentario' => 'required'
         ]);
+        
         //insertar en DB
+        /*          PROTOTIPO
+        DB:table('contactos')->insert([
+            'name' -> $request->name,
+            'email' -> $request->email,
+            'mensaje' -> $request->comentario,
+            'created_at' -> now(),
+            'updated_at' -> now(),
+        ]);
+        */
 
+        return redirect('/contacto');
         //Redirigir
     }
 
