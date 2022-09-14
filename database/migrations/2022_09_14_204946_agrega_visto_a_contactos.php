@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreaTablaContactos extends Migration
+class AgregaVistoAContactos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreaTablaContactos extends Migration
      */
     public function up()
     {
-        Schema::create('contactos', function(Blueprint $table){
-            
+        Schema::table('contactos', function (Blueprint $table) {
+            $table->boolean('visto')->after('comentario')->default(0);
         });
     }
 
@@ -25,6 +25,8 @@ class CreaTablaContactos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExist('contactos');
+        Schema::table('contactos', function (Blueprint $table) {
+            $table->dropColumn('visto');
+        });
     }
 }
