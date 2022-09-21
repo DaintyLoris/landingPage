@@ -40,7 +40,7 @@ class SitioController extends Controller
         
         //insertar en DB
         //          PROTOTIPO
-        DB:table('contactos')->insert([
+        DB::table('contactos')->insert([
             'name' => $request->name,
             'email' => $request->email,
             'comentario' => $request->comentario,
