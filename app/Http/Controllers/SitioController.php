@@ -39,15 +39,15 @@ class SitioController extends Controller
         ]);
         
         //insertar en DB
-        /*          PROTOTIPO
+        //          PROTOTIPO
         DB:table('contactos')->insert([
-            'name' -> $request->name,
-            'email' -> $request->email,
-            'mensaje' -> $request->comentario,
-            'created_at' -> now(),
-            'updated_at' -> now(),
+            'name' => $request->name,
+            'email' => $request->email,
+            'comentario' => $request->comentario,
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
-        */
+        
 
         return redirect('/contacto');
         //Redirigir
