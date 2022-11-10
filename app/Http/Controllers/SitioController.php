@@ -33,7 +33,7 @@ class SitioController extends Controller
 
         //Validar
         $request->validate([
-            'name' => 'required|max:255|min:3',
+            'name' => ['required |max:255 | min:3'],
             'email' => ['required', 'email'],
             'comentario' => 'required'
         ]);

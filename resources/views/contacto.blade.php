@@ -48,7 +48,7 @@
             @enderror
             <br>
 
-            <input type="submit" value="UwU">
+            <input type="submit" value="Enviar">
 
         </form>
         
